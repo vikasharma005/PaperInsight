@@ -1,7 +1,9 @@
 
 # PaperInsight 📊📄
 
-![PaperInsight Logo](https://via.placeholder.com/150x150.png?text=PaperInsight)
+<p align="center">
+  <img src="https://github.com/vikasharma005/PaperInsight/blob/main/logo.png" width="300" alt="PaperInsight Logo">
+</p>
 
 [![GitHub license](https://img.shields.io/github/license/vikasharma005/PaperInsight.svg)](https://github.com/vikasharma005/PaperInsight/blob/main/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/vikasharma005/PaperInsight.svg)](https://github.com/vikasharma005/PaperInsight/stargazers)
@@ -10,7 +12,7 @@
 
 > Transform your research papers into insightful dashboards with ease! 🚀
 
-PaperInsight is a powerful web application that converts academic research papers into interactive and visually appealing dashboards. Unlock the potential of your research with just a few clicks!
+PaperInsight is a powerful web application built with Django that converts academic research papers into interactive and visually appealing dashboards. Unlock the potential of your research with just a few clicks!
 
 ## 🌟 Features
 
@@ -18,15 +20,16 @@ PaperInsight is a powerful web application that converts academic research paper
 - 🔍 Advanced Natural Language Processing (NLP) for text analysis
 - 📊 Dynamic visualization generation
 - 📈 Word frequency and key phrase analysis
-- 🖥️ User-friendly interface built with Vue.js
-- 🔧 Robust backend powered by Flask
+- 🖥️ User-friendly interface built with Django templates
+- 🔧 Robust backend powered by Django ORM
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
 - Python 3.7+
-- Node.js and npm
+- Django 3.2.10
+- Node.js and npm (for frontend dependencies)
 
 ### Installation
 
@@ -43,24 +46,24 @@ PaperInsight is a powerful web application that converts academic research paper
 
 3. Install frontend dependencies:
    ```bash
-   cd frontend
+   cd dashboard/static/dashboard
    npm install
    ```
 
 ### Running the Application
 
-1. Start the Flask backend:
+1. Apply database migrations:
    ```bash
-   python app.py
+   python manage.py makemigrations
+   python manage.py migrate
    ```
 
-2. In a new terminal, start the Vue.js frontend:
+2. Start the Django development server:
    ```bash
-   cd frontend
-   npm run serve
+   python manage.py runserver
    ```
 
-3. Open your browser and navigate to `http://localhost:8080`
+3. Open your browser and navigate to `http://localhost:8000`
 
 ## 🖼️ Screenshots
 
@@ -75,8 +78,8 @@ PaperInsight is a powerful web application that converts academic research paper
 
 ## 🛠️ Technologies Used
 
-- Backend: Flask, NLTK, PyPDF2, python-docx
-- Frontend: Vue.js, Axios
+- Backend: Django, NLTK, PyPDF2, python-docx
+- Frontend: HTML, CSS, JavaScript (Vue.js removed)
 - Visualization: Matplotlib
 
 ## 🤝 Contributing
@@ -95,13 +98,13 @@ If you encounter any issues or have questions, please file an issue on the GitHu
 
 - [NLTK](https://www.nltk.org/) for natural language processing
 - [Matplotlib](https://matplotlib.org/) for data visualization
-- [Vue.js](https://vuejs.org/) for the frontend framework
+- [Django](https://www.djangoproject.com/) for the backend framework
 
 ## 🔮 Future Enhancements
 
-- [ ] Implement user authentication and paper storage
+- [ ] Implement user authentication and authorization
 - [ ] Add more advanced NLP techniques (e.g., topic modeling, sentiment analysis)
-- [ ] Create interactive and customizable dashboards
+- [ ] Enhance frontend with interactive and customizable dashboards
 - [ ] Develop a citation network visualization feature
 - [ ] Integrate with academic databases for paper recommendations
 
@@ -110,7 +113,4 @@ If you encounter any issues or have questions, please file an issue on the GitHu
 <p align="center">
   Made with ❤️ by <a href="https://github.com/vikasharma005">Vikas Sharma</a>
 </p>
-
-
-
 
